@@ -1,7 +1,7 @@
 pipeline{
     agent any
     
-    stage {
+    stages {
         stage ('Setting Environment') {
             steps {
                 echo 'Testing Jenkinsfile Works!'
