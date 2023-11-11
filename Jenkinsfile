@@ -8,8 +8,12 @@ pipeline {
 
     stages {
         stage ('Remove Project Old Path') {
-            def pathWorkspace = '/var/lib/jenkins/workspace'
-            sh 'rm -rd ${pathWorkspace}/*'
+            steps {
+                script {
+                    def pathWorkspace = '/var/lib/jenkins/workspace'
+                    sh 'rm -rd ${pathWorkspace}/*'
+                }
+            }
         }
         stage ('Setting Workspace Location') {
             steps {
