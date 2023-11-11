@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage ('Setting Workspace Location') {
             steps {
-                // sh 'cd /var/lib/jenkins/workspace/ && rm -rf *'
                 dir(WORKSPACE_LOCATION){
                     sh 'echo "Change Github Clone With Custom Workspace"'
                     checkout scm
