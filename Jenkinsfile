@@ -6,10 +6,6 @@ pipeline {
         WORKSPACE_LOCATION = "/var/www/html/jenkins-workspace/${JOB_NAME_PATH}"
     }
 
-   parameters {
-    string(name: 'NAME',defaultValue: 'your name',description: 'Untuk Mencoba Nama Pada Jenkinsfile Build With Paramater')
-   }
-
     stages {
         stage ('Setting Workspace Location') {
             steps {
