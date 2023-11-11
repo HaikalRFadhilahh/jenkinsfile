@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         JOB_NAME_PATH = "${env.JOB_NAME.replace('/', '_')}"
-        WORKSPACE_LOCATION = "/var/www/html/${JOB_NAME_PATH}"
+        WORKSPACE_LOCATION = "/var/www/html/jenkins-workspace/${JOB_NAME_PATH}"
     }
 
     stages {
