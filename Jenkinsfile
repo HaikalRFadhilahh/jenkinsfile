@@ -7,14 +7,6 @@ pipeline {
     }
 
     stages {
-        stage ('Remove Project Old Path') {
-            steps {
-                script {
-                    def pathWorkspace = '/var/lib/jenkins/workspace'
-                    sh 'rm -rd ${pathWorkspace}/*'
-                }
-            }
-        }
         stage ('Setting Workspace Location') {
             steps {
                 // sh 'cd /var/lib/jenkins/workspace/ && rm -rf *'
@@ -28,6 +20,7 @@ pipeline {
             steps {
                 dir(WORKSPACE_LOCATION) {
                     echo 'wkwkwk Land'
+                    sh 'docker ps'
                 }
             }
         }
