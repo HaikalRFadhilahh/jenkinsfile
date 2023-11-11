@@ -25,8 +25,8 @@ pipeline {
                 dir(WORKSPACE_LOCATION) {
                     echo 'wkwkwk Land'
                     sh 'docker ps'
-                    def variabelValue = params.NAME
-                    echo 'Selamat Pagi ${variabelValue}'
+                    
+                    echo 'Selamat Pagi $params.NAME'
                 }
             }
         }
