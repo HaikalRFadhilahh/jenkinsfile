@@ -26,7 +26,7 @@ pipeline {
                     echo 'wkwkwk Land'
                     sh 'docker ps'
                     
-                    echo 'Selamat Pagi $params.NAME'
+                    echo "Selamat Pagi ${NAME}"
                 }
             }
         }
