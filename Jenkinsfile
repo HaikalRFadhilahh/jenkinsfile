@@ -11,6 +11,7 @@ pipeline {
             steps {
                 dir(WORKSPACE_LOCATION){
                     sh 'echo "Change Github Clone With Custom Workspace"'
+                    checkout scm
                 }
             }
         }
