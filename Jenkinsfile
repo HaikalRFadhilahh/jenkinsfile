@@ -21,6 +21,7 @@ pipeline {
                     script {
                         params.each {param -> 
                             echo "${param.key.trim()}=${param.value.trim()}"
+                            sh "echo 'wkwkw Land'"
                         }
                     }
                 }
