@@ -18,9 +18,11 @@ pipeline {
         stage  ('Setting Environment Variabel'){
             steps {
                 dir(WORKSPACE_LOCATION) {
-                    params.each {
+                    script {
+                        params.each {
                         param -> 
                         echo "${param.value.trim()}"
+                    }
                     }
                 }
             }
