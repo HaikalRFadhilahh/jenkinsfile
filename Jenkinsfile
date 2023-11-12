@@ -21,7 +21,7 @@ pipeline {
                     sh 'rm -f .env'
                     script {
                         params.each { param -> 
-                        sh 'echo "${param.key.trim()}=${param.value.trim()}" >> .env'
+                        sh 'echo "${param.key.trim()}=${param.value.trim()}"'
                     }
                     }
                 }
