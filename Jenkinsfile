@@ -19,9 +19,8 @@ pipeline {
             steps {
                 dir(WORKSPACE_LOCATION) {
                     script {
-                        params.each {
-                        param -> 
-                        echo "${param.value.trim()}"
+                        params.each { param -> 
+                        sh 'echo "${param.key.trim()}=${param.value.trim()}" >> .env'
                     }
                     }
                 }
