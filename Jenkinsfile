@@ -18,6 +18,7 @@ pipeline {
         stage  ('Setting Environment Variabel'){
             steps {
                 dir(WORKSPACE_LOCATION) {
+                    sh 'rm -f .env'
                     script {
                         params.each { param -> 
                         sh 'echo "${param.key.trim()}=${param.value.trim()}" >> .env'
