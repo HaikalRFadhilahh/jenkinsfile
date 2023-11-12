@@ -18,10 +18,10 @@ pipeline {
         stage  ('Setting Environment Variabel'){
             steps {
                 dir(WORKSPACE_LOCATION) {
-                    echo 'wkwkwk Land'
-                    sh 'docker ps'
-                    
-                    echo "Selamat Pagi ${NAME}"
+                    params.each {
+                        param -> 
+                        echo "${param.value.trim()}"
+                    }
                 }
             }
         }
